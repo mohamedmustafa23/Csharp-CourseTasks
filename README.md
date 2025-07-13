@@ -12,33 +12,33 @@
 
 \- \*\*Week 01\*\*
 
-&nbsp; - \*\*Task1:\*\* \[Carpet Cleaning Cost Estimator](Week-01/SolveTask1/Program.cs)
+  - \*\*Task1:\*\* \[Carpet Cleaning Cost Estimator](https://github.com/mohamedmustafa23/Csharp-CourseTasks/blob/main/Week-01/SolveTask1/Program.cs)
 
-&nbsp;   - Calculates cost for small and large carpets.
+    - Calculates cost for small and large carpets.
 
-&nbsp;   - Adds tax.
+    - Adds tax.
 
-&nbsp;   - Displays estimate.
+    - Displays estimate.
 
 
 
 \- \*\*Week 02\*\*
 
-&nbsp; - \*\*Task2:\*\* \[Numbers Menu Program](Week-02/SolveTask2/Program.cs)
+  - \*\*Task2:\*\* \[Numbers Menu Program](https://github.com/mohamedmustafa23/Csharp-CourseTasks/blob/main/Week-02/SolveTask2/SolveTask2/Program.cs)
 
-&nbsp;   - Add single/multiple numbers.
+    - Add single/multiple numbers.
 
-&nbsp;   - Prevent duplicates.
+    - Prevent duplicates.
 
-&nbsp;   - Validate input.
+    - Validate input.
 
-&nbsp;   - Calculate mean, min, max.
+    - Calculate mean, min, max.
 
-&nbsp;   - Sort list.
+    - Sort list.
 
-&nbsp;   - Search for number.
+    - Search for number.
 
-&nbsp;   - Clear list.
+    - Clear list.
 
 
 
