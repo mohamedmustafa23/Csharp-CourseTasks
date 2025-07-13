@@ -1,0 +1,14 @@
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.GeneratedMSBuildEditorConfig.editorconfig
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.AssemblyInfoInputs.cache
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.AssemblyInfo.cs
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.csproj.CoreCompileInputs.cache
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\bin\Debug\net9.0\SolveTask1.exe
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\bin\Debug\net9.0\SolveTask1.deps.json
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\bin\Debug\net9.0\SolveTask1.runtimeconfig.json
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\bin\Debug\net9.0\SolveTask1.dll
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\bin\Debug\net9.0\SolveTask1.pdb
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.dll
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\refint\SolveTask1.dll
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.pdb
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\SolveTask1.genruntimeconfig.cache
+D:\.Net Diploma\Documents\Week1\D01\SolveTask1\obj\Debug\net9.0\ref\SolveTask1.dll
