@@ -42,31 +42,31 @@
 
 \- \*\*Week 03\*\*
 
-  - \*\*Task3:\*\* \[StudentManagementSystem](https://github.com/mohamedmustafa23/Csharp-CourseTasks/tree/main/Week-03/StudentManagementSystem)
+  - \*\*Task3:\*\* \[StudentManagementSystem](https://github.com/mohamedmustafa23/Csharp-CourseTasks/tree/main/Week-03)
 
-    - 1. Add a new Student 
+    - 1. Add a new Student
 
-&nbsp;   - 2. View all Students 
+    - 2. View all Students
 
-&nbsp;   - 3. Search for a Student by ID 
+    - 3. Search for a Student by ID
 
-&nbsp;   - 4. Fine the course by id or name 
+    - 4. Fine the course by id or name
 
-&nbsp;   - 5. Delete a Student 
+    - 5. Delete a Student
 
-&nbsp;   - 6. Add a new Course 
+    - 6. Add a new Course
 
-&nbsp;   - 7. Add a new Instructor 
+    - 7. Add a new Instructor
 
-&nbsp;   - 8. Enroll a Student in a Course 
+    - 8. Enroll a Student in a Course
 
-&nbsp;   - 9. View all Courses 
+    - 9. View all Courses
 
-&nbsp;   - 10. View all Instructors
+    - 10. View all Instructors
 
-&nbsp;   - 11. Check if the student enrolled in specific course 
+    - 11. Check if the student enrolled in specific course
 
-&nbsp;   - 12. Return the instructor name by course name
+    - 12. Return the instructor name by course name
 
 
 
