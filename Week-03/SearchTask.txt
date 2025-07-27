@@ -1,0 +1,72 @@
+1-Class 
+
+reference type 
+بيتخزن في ال heap
+لازم نستخدم new واحنا بناخد منه instance 
+بيدعم ال inheritance 
+
+
+2- Struct
+
+Value type 
+
+التخزين في ال stack 
+
+ممكن ناخد اوبجكت بكلمة new او من غيرها عادي 
+
+مِش بتدعم inheritance 
+
+
+3-record 
+
+  reference type 
+
+التخزين بتاعه في ال Heap
+
+بس اما بنعمل مقارنه او بنستخدم == هي بتقارن الفاليو مش بتقارن الادريس 
+
+
+using System;
+
+class Person
+{
+    public string Name;
+    public int Age;
+}
+
+struct Student
+{
+    public string Name;
+    public int Age;
+}
+
+record  Instructor(string name,int age);
+
+class Program
+{
+    static void Main()
+    {
+        Person p1 = new Person { Name = "Ali", Age = 20 };
+        Person p2 = p1;
+
+        p2.Name = "Ahmed";
+
+        Console.WriteLine($"p1.Name = {p1.Name}"); //Ahmed
+        Console.WriteLine($"p2.Name = {p2.Name}"); //Ahmed
+
+        Student s1 = new Student { Name = "Ahmed" ,Age = 20 };
+        Student s2 = s1;
+
+        s2.Name = "Abdo";
+
+        Console.WriteLine($"s1.Name = {s1.Name}"); //Ahmed
+        Console.WriteLine($"s2.Name = {s2.Name}"); //Abdo
+
+        Instructor i1 = new Instructor("Samir", 24);
+        Instructor i2 = i1;
+
+        Console.WriteLine($"i1 == i2: {i1 == i2}");  // true
+        Console.WriteLine($"p1.Equals(p2): {i1.Equals(i2)}");  // true
+
+    }
+}
