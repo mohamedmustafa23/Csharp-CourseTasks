@@ -40,6 +40,8 @@
 
     - Clear list.
 
+
+
 \- \*\*Week 03\*\*
 
   - \*\*Task3:\*\* \[StudentManagementSystem](https://github.com/mohamedmustafa23/Csharp-CourseTasks/tree/main/Week-03)
@@ -67,6 +69,38 @@
     - 11. Check if the student enrolled in specific course
 
     - 12. Return the instructor name by course name
+
+
+
+\- \*\*Week 03\*\*
+
+&nbsp;   - \*\*Task3:\*\* \[Examination System] (https://github.com/mohamedmustafa23/Csharp-CourseTasks/tree/main/Week-04/ExaminationSystem)
+
+\### Doctor Side:
+
+&nbsp; - Register/login
+
+&nbsp; - Add multiple types of questions:
+
+&nbsp; - Multiple Choice
+
+&nbsp; - Choose One
+
+&nbsp; - True/False
+
+&nbsp; - Create new exams by selecting questions from the question bank
+
+
+
+\### Student Side:
+
+&nbsp; - Register/login
+
+&nbsp; - View available exams (Final / Practical)
+
+&nbsp; - Take exams interactively via console
+
+&nbsp; - Get score after submission
 
 
 
