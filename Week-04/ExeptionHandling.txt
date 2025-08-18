@@ -1,0 +1,49 @@
+ايه هو ال Exception handling 
+
+ده أسلوب بنعمله علشان نعالج الأخطاء اللي ممكن تحصل اما نشغل البرنامج دي بتكون زي حاجات غير متوقعه بنسميها Exception زي اني ادخل قيمه استرينج وانا أكون متوقع منه Int
+
+ايه أهميته 
+
+ده بيمنع ان البرنامج يقف مره واحده 
+تقدر تظهر رساله علي حسب كل خطاء بيعمله اليوزر 
+
+
+أساس Exception ده بيتكون من تلت كلمات هما 
+
+try 
+ودي اللي بنحط جوها الكود اللي متوقعين انه ممكن يعمل Exception 
+
+catch (Exception ex)
+هنا علي حسب نوع الخطاء بنتعامل معاه 
+
+finally 
+
+الكود اللي هنا ده بيكون بيتنفز أيا كان النتيجه بتاعت try او أيا كان Exception 
+
+
+مثال 
+
+try
+{
+    int a = 10;
+    int b = 0;
+    int result = a / b;
+}
+catch (DivideByZeroException)
+{
+    Console.WriteLine(" you can not divide by zero");
+}
+finally
+{
+    Console.WriteLine("Done");
+}
+
+من اشهر أنواع ال Exceptions 
+
+DivideByZeroException
+FormatException
+NullReferenceException
+IndexOutOfRangeException
+
+في بارده Keyword اسمها throw
+دي بنستخدمها علشان نعمل احنا Exception يدوي 
