@@ -1,0 +1,29 @@
+
+1. Musician(ID, Name, St, City, Phone)
+2. Album(ID, Date, Title, Musician_id)
+3. Song(ID, Title, Author, album_id)
+4. Instrument(ID, Name, Key)
+5. Musician_Play_Song(Musician_id, Song_id)
+6. Musician_Play_Instrument(Musician_id, Instrument_id)
+
+================================================================================
+
+
+1.  Sales_Office( Num, Loc, Employee_id)
+2. Employee( ID, Name, Num)
+3. Property( ID, Add, City, State, Zip, Num)
+4. Owner( ID, Name)
+5. Property_Has_Owner( Property_id, Owner_id, precent-owned)
+
+
+=================================================================================
+
+
+1. Pitient( ID, Name, DOB, Consultant_id, Ward_id)
+2. Consultant( ID, Name)
+3. Drug( Code, Recdosage)
+4. Drug_Brand( Drug_code, Brand)
+5. Nurse( ID, Name, Ward_id)
+6. Ward( ID, Name, nurse_id)
+7. Consultant_examine_Patient( Consultant_id, Pitient_id)
+8. nurse_gives_Patient_Drug( Drug_code, Patient_id, nurse_id, Date, Time, Dosage)
