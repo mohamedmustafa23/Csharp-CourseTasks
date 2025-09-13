@@ -1,0 +1,162 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\models\\homework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\models\\homework.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\models\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\models\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\models\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\migrations\\20250912141829_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\migrations\\20250912141829_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\data\\studentsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\data\\studentsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|d:\\.net diploma\\csharp-coursetasks\\week-04\\studentssystem\\studentssystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97931F0E-4290-48CF-8364-B5FDFC088459}|StudentsSystem\\StudentsSystem.csproj|solutionrelative:studentssystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Homework.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Homework.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Models\\Homework.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Homework.cs",
+              "RelativeToolTip": "StudentsSystem\\Models\\Homework.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:43:07.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentCourse.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\StudentCourse.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Models\\StudentCourse.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\StudentCourse.cs",
+              "RelativeToolTip": "StudentsSystem\\Models\\StudentCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:41:56.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Resource.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Models\\Resource.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Resource.cs",
+              "RelativeToolTip": "StudentsSystem\\Models\\Resource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:43:29.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Models\\Course.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Course.cs",
+              "RelativeToolTip": "StudentsSystem\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:42:21.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Models\\Student.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Models\\Student.cs",
+              "RelativeToolTip": "StudentsSystem\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:41:25.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250912141829_InitialCreate.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Migrations\\20250912141829_InitialCreate.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Migrations\\20250912141829_InitialCreate.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Migrations\\20250912141829_InitialCreate.cs",
+              "RelativeToolTip": "StudentsSystem\\Migrations\\20250912141829_InitialCreate.cs",
+              "ViewState": "AgIAAB8AAAAA0v////8PwCwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T14:18:30.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentSystemContext.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Data\\StudentSystemContext.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Data\\StudentSystemContext.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Data\\StudentSystemContext.cs",
+              "RelativeToolTip": "StudentsSystem\\Data\\StudentSystemContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:31:09.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Program.cs",
+              "RelativeDocumentMoniker": "StudentsSystem\\Program.cs",
+              "ToolTip": "D:\\.Net Diploma\\Csharp-CourseTasks\\Week-04\\StudentsSystem\\StudentsSystem\\Program.cs",
+              "RelativeToolTip": "StudentsSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T09:29:09.547Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
