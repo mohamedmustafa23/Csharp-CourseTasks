@@ -1,0 +1,149 @@
+1. How We Can Add new Index?
+
+we have two different ways 
+
+1-using Data Annotation
+
+for ex:
+
+[Index(nameof(Name))]
+public class Student 
+{
+	public int StudentId { get; set; }
+	public string Name { get; set; }
+}
+
+here we create new index on the Name column
+
+we can also make a composite Index
+
+for ex:
+
+[Index(nameof(FirstName), nameof(LastName))]
+public class Student
+{
+	public int StudentId { get; set; }
+	public string FirstName { get; set; }
+	public string LastName { get; set; }
+}
+
+2-using fluent API
+
+for ex:
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+	modelBuilder.Entity<Studentj>()
+	.HasIndex(s => s.Name);
+}
+
+and 
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+	modelBuilder.Entity<Studentj>()
+	.HasIndex(s => new {s.FirstName, s.LastName);
+}
+
+2. How We Can Add new Sequence?
+
+we can add new sequence in one way
+
+ex:
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+ 	modelBuilder.HasSequence<int>("OrderNumbers", schema: "dbo")
+	.StartsAt(1000)
+	.IncrementsBy(1);
+
+	modelBuilder.Entity<Order>()
+        .Property(o => o.OrderNo)
+        .HasDefaultValueSql("NEXT VALUE FOR dbo.OrderNumbers");
+}
+
+3. How We deal with inheritance processes?
+
+we have three strategy 
+
+table per hierarchy (default strategy)
+	
+	. all entites are stored in a single table 
+	. a discriminator column is used to differentiate between entity types
+	. this is the fastest 
+
+ex:
+
+public abstract class Animal
+{
+	public int Id { get; set; }
+	public string Name { get; set; }
+    	public int Age { get; set; }  
+}
+
+public class Cat : Animal
+{
+    public String Color { get; set; }
+}
+
+public class Dog : Animal
+{
+    public string Breed { get; set; } 
+}
+
+Generated table:
+CREATE TABLE Animal (
+    Id int PRIMARY KEY,
+    Name nvarchar(max),
+    Color nvarchar (max),
+    Breed nvarchar(max) NULL,
+    Discriminator nvarchar(max) NOT NULL
+);
+
+
+2-Table per Type
+	
+	. Each entity has its own table
+	. Derived tables reference the base table with a foreign key
+	. More normalized but queries require JOINs, so performance is a bit slower
+
+Ex:
+
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Person>().ToTable("People");
+    modelBuilder.Entity<Student>().ToTable("Students");
+    modelBuilder.Entity<Teacher>().ToTable("Teachers");
+}
+
+Generated tables:
+
+People (Id, Name)
+
+Students (Id, RegisteredOn)
+
+Teachers (Id, Subject)
+
+3-Table per Concrete Type
+	. Each entity gets its own table with all properties
+	. No discriminator column, no joins, but data is duplicated
+
+EX:
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Person>().UseTpcMappingStrategy();
+}
+
+Tables:
+
+Students (Id, Name, RegisteredOn)
+
+Teachers (Id, Name, Subject)
+
+Summary
+
+TPH → default, fastest, but table can contain many NULLs.
+
+TPT → normalized, but needs JOINs.
+
+TPC → no joins, but data duplication.
