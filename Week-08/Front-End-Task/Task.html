@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">HTML Form Example</h1>
+
+        <p class="lead">
+            This is an example of an <del>HTML4</del> <u>HTML5</u> form containing various
+            <mark>input</mark>controls
+        </p>
+
+        <form class="border rounded p-4 shadow-sm bg-light">
+            <!-- User Info -->
+            <fieldset class="mb-4">
+                <legend>User Information</legend>
+                <div class="mb-3">
+                    <label for="UserName" class="form-label">User Name</label>
+                    <input id="UserName"  name="UserName" type="text" class="form-control" placeholder="User Name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="Email" type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" name="Password" type="password" class="form-control" placeholder="Password">
+                </div>
+            </fieldset>
+
+            <!-- Contact Info -->
+            <fieldset class="mb-4">
+                <legend>Contact Information</legend>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input id="phone" name="PhoneNumber" type="number" class="form-control" placeholder="Enter your phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea rows="4" name="Message" id="message" class="form-control"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Subscription -->
+            <fieldset class="mb-4">
+                <legend>Subscription</legend>
+                <div class="form-check">
+                    <input id="subscribe1" name="sub"  type="checkbox" class="form-check-input">
+                    <label for="subscribe1" class="form-check-label">Subscribe to Newsletter</label>
+                </div>
+                <div class="form-check">
+                    <input id="subscribe2" name="sup" type="checkbox" class="form-check-input">
+                    <label for="subscribe2" class="form-check-label">Subscribe to Newsletter</label>
+                </div>
+            </fieldset>
+
+            <!-- Preferred Language -->
+            <fieldset class="mb-4">
+                <legend>Preferred Language</legend>
+                <label for="language" class="form-label">Select your preferred language:</label>
+                <select id="language" name="language" class="form-select border border-secondary rounded">
+                    <option value="">-- Select Language --</option>
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                </select>
+            </fieldset>
+
+            <!-- Feedback -->
+            <fieldset class="mb-4">
+                <legend>Feedback</legend>
+                <label for="rangerate" class="form-label">Rate our service</label>
+                <input type="range" class="form-range" min="0" max="10" value="5" id="rangerate" step="1">
+                <output for="rangerate" id="rangeValue" aria-hidden="true"></output>
+
+                <script>
+
+                    const rangeInput = document.getElementById('rangerate');
+                    const rangeOutput = document.getElementById('rangeValue');
+
+                    rangeOutput.textContent = rangeInput.value;
+
+                    rangeInput.addEventListener('input', function () {
+                        rangeOutput.textContent = this.value;
+                    });
+                </script>
+            </fieldset>
+
+            <!-- Buttons -->
+            <div class="d-flex gap-2">
+                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-outline-secondary" type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -147,3 +147,4 @@ TPH → default, fastest, but table can contain many NULLs.
 TPT → normalized, but needs JOINs.
 
 TPC → no joins, but data duplication.
+
