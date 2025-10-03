@@ -1,0 +1,197 @@
+﻿@model Hospital.Models.Doctor
+@{
+    ViewData["Title"] = "Appointment";
+}
+
+<body id="top">
+    <section class="page-title bg-1">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block text-center">
+                        <span class="text-white">Book your Seat</span>
+                        <h1 class="text-capitalize mb-5 text-lg">Appointment</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="appoinment section">
+        <div class="container">
+            <div class="row">
+                <!-- Doctor Info -->
+                <div class="col-lg-4">
+                    <div class="mt-3">
+                        <div class="feature-icon mb-3">
+                            <img src="~/Images/@Model.Img" alt="doctor-image" class="img-fluid w-100 rounded shadow" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointment Form -->
+                <div class="col-lg-8">
+                    <div class="appointment-wrap mt-5 mt-lg-0 pl-lg-5">
+                        <h2 class="mb-2 title-color">@Model.Name</h2>
+                        <p class="mb-4">
+                            Dr. @Model.Name is a specialist in @Model.Specialization.
+                            He/She is @Model.Age years old and is dedicated to providing the best care for patients.
+                        </p>
+
+                        <form asp-action="ConfirmAppointment" method="post" class="appoinment-form">
+                            <input type="hidden" name="DoctorId" value="@Model.DoctorId" />
+
+                            <div class="row">
+                                <!-- Patient Name -->
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input name="name" type="text" class="form-control" placeholder="Full Name" required />
+                                    </div>
+                                </div>
+
+                                <!-- WeekDay Dropdown -->
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <select class="form-control" name="date" id="daySelect" required>
+                                            <option value="">-- Select Day --</option>
+                                            <option disabled value="Saturday">Saturday</option>
+                                            <option value="Sunday">Sunday</option>
+                                            <option value="Monday">Monday</option>
+                                            <option value="Tuesday">Tuesday</option>
+                                            <option value="Wednesday">Wednesday</option>
+                                            <option value="Thursday">Thursday</option>
+                                            <option disabled value="Friday">Friday</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Time Dropdown (Will be populated by JS) -->
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <select name="time" id="timeSelect" class="form-control" required>
+                                            <option value="" disabled selected>-- Choose a Day First --</option>
+                                            <!-- Time options will be populated by JavaScript -->
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input name="phone" type="tel" class="form-control" placeholder="Phone Number" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-main btn-round-full">
+                                Make Appointment <i class="icofont-simple-right ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // SweetAlert2 messages
+        @if (ViewBag.SuccessMessage != null)
+        {
+                <text>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: '@ViewBag.SuccessMessage',
+                        timer: 3000,
+                        showConfirmButton: false
+                    });
+                </text>
+        }
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+                <text>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: '@ViewBag.ErrorMessage',
+                        timer: 3000,
+                        showConfirmButton: false
+                    });
+                </text>
+        }
+
+
+        // JavaScript for dynamic time slot loading
+        document.addEventListener('DOMContentLoaded', function () {
+            const daySelect = document.getElementById('daySelect');
+            const timeSelect = document.getElementById('timeSelect');
+            const doctorId = @Model.DoctorId; // Get DoctorId from the model
+
+            // Function to generate time options
+            function generateTimeOptions(bookedTimes) {
+                timeSelect.innerHTML = '<option value="" disabled selected>-- Choose a Time --</option>'; // Clear existing options
+
+                const startTime = 8 * 60; // 8:00 AM in minutes
+                const endTime = 17 * 60; // 5:00 PM in minutes
+                const interval = 30; // 30 minutes
+
+                for (let totalMinutes = startTime; totalMinutes < endTime; totalMinutes += interval) {
+                    const hours = Math.floor(totalMinutes / 60);
+                    const minutes = totalMinutes % 60;
+
+                    const timeValue = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+                    const displayHours = hours % 12 || 12; // Convert to 12-hour format
+                    const ampm = hours < 12 ? 'AM' : 'PM';
+                    const displayTime = `${String(displayHours).padStart(2, '0')}:${String(minutes).padStart(2, '0')} ${ampm}`;
+
+                    const isBooked = bookedTimes.includes(timeValue); // Check if time is booked
+
+                    const option = document.createElement('option');
+                    option.value = timeValue;
+                    option.textContent = displayTime + (isBooked ? ' (Booked)' : '');
+                    if (isBooked) {
+                        option.disabled = true;
+                    }
+                    timeSelect.appendChild(option);
+                }
+            }
+
+            // Function to fetch and update time slots
+            async function updateTimeSlots() {
+                const selectedDay = daySelect.value;
+
+                if (!selectedDay) {
+                    timeSelect.innerHTML = '<option disabled selected>-- Choose a Day First --</option>';
+                    return;
+                }
+
+                // Fetch booked times for the selected day
+                try {
+                    const response = await fetch(`/Home/GetBookedTimes?doctorId=${doctorId}&selectedDate=${selectedDay}`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const bookedTimes = await response.json(); // bookedTimes will be an array of "HH:mm" strings
+                    generateTimeOptions(bookedTimes);
+                } catch (error) {
+                    console.error("Error fetching booked times:", error);
+                    timeSelect.innerHTML = '<option disabled selected>-- Error loading times --</option>';
+                }
+            }
+
+            // Event listener for day selection change
+            daySelect.addEventListener('change', updateTimeSlots);
+
+            // Initial load of time slots if a day is already selected (e.g., after an error or if you pre-select one)
+            // You might want to call updateTimeSlots() here if you pre-select a day in Razor.
+            // For now, it defaults to "-- Choose a Day First --".
+            // If you want to initially load, you could set daySelect.value to 'Sunday' and then call updateTimeSlots();
+             
+        });
+    </script>
+</body>

@@ -1,0 +1,76 @@
+﻿@model List<Hospital.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Appointments List";
+}
+
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <span class="text-white">Your Bookings</span>
+                    <h1 class="text-capitalize mb-5 text-lg">All Appointments</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section appointment-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                @if (Model != null && Model.Any())
+                {
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Doctor Name</th>
+                                <th>Specialization</th>
+                                <th>Patient Name</th>
+                                <th>Phone</th>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var appointment in Model)
+                            {
+                                <tr>
+                                    <td>@appointment.AppointmentId</td>
+                                    <td>@appointment.Doctor?.Name</td>
+                                    <td>@appointment.Doctor?.Specialization</td>
+                                    <td>@appointment.PatientName</td>
+                                    <td>@appointment.Phone</td>
+                                    <td>@appointment.WeekDay</td>
+                                    <td>@appointment.Time.ToString("hh:mm tt")</td>
+                                    <td>
+                                        @if (appointment.IsBooked)
+                                        {
+                                            <span class="badge badge-success">Booked</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-secondary">Cancelled</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-info text-center" role="alert">
+                        No appointments found.
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

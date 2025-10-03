@@ -1,0 +1,144 @@
+﻿@model IEnumerable<Doctor>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+<section class="page-title bg-1">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block text-center">
+                    <span class="text-white">All Doctors</span>
+                    <h1 class="text-capitalize mb-5 text-lg">Specialized doctors</h1>
+
+                    <!-- <ul class="list-inline breadcumb-nav">
+                      <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                      <li class="list-inline-item"><span class="text-white">/</span></li>
+                      <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section doctors">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <div class="section-title">
+                    <h2>Doctors</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque, voluptate. Beatae officiis neque </p>
+                </div>
+            </div>
+        </div>
+
+       
+        
+
+        <form class="container" asp-controller="Home" asp-action="Index" method="get">
+            <div class="row justify-content-center">
+
+                <div class="col-12 text-center mb-4">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn @(ViewBag.Specialization == "all" || string.IsNullOrEmpty(ViewBag.Specialization) ? "active" : "")">
+                            <input type="radio" name="specialization" value="all"
+                                   @(ViewBag.Specialization == "all" || string.IsNullOrEmpty(ViewBag.Specialization) ? "checked" : "") /> All Department
+                        </label>
+                        <label class="btn @(ViewBag.Specialization == "Cardiology" ? "active" : "")">
+                            <input type="radio" name="specialization" value="Cardiology"
+                                   @(ViewBag.Specialization == "Cardiology" ? "checked" : "") /> Cardiology
+                        </label>
+                        <label class="btn @(ViewBag.Specialization == "Dermatology" ? "active" : "")">
+                            <input type="radio" name="specialization" value="Dermatology"
+                                   @(ViewBag.Specialization == "Dermatology" ? "checked" : "") /> Dermatology
+                        </label>
+                        <label class="btn @(ViewBag.Specialization == "Neurology" ? "active" : "")">
+                            <input type="radio" name="specialization" value="Neurology"
+                                   @(ViewBag.Specialization == "Neurology" ? "checked" : "") /> Neurology
+                        </label>
+                        <label class="btn @(ViewBag.Specialization == "Orthopedics" ? "active" : "")">
+                            <input type="radio" name="specialization" value="Orthopedics"
+                                   @(ViewBag.Specialization == "Orthopedics" ? "checked" : "") /> Orthopedics
+                        </label>
+                        <label class="btn @(ViewBag.Specialization == "Pediatric" ? "active" : "")">
+                            <input type="radio" name="specialization" value="Pediatric"
+                                   @(ViewBag.Specialization == "Pediatric" ? "checked" : "") /> Pediatric
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Age -->
+                <div class="col-12 d-flex justify-content-center mb-3">
+                    <div class="col-md-2">
+                        <input type="number" name="minAge" class="form-control" placeholder="Min Age"
+                               value="@ViewBag.MinAge" />
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" name="maxAge" class="form-control" placeholder="Max Age"
+                               value="@ViewBag.MaxAge" />
+                    </div>
+                </div>
+
+                <!-- Filter Button -->
+                <div class="col-12 mb-3 text-center">
+                    <button type="submit" class="btn btn-primary px-5">Filter</button>
+                </div>
+            </div>
+        </form>
+
+
+
+        <div class="row shuffle-wrapper portfolio-gallery">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item">
+                    <div class="position-relative doctor-inner-box">
+                        <div class="doctor-profile">
+                            <div class="doctor-img">
+                                <img src="~/Images/@item.Img" alt="doctor-image" class="img-fluid w-100">
+                            </div>
+                        </div>
+                        <div class="content mt-3 text-center">
+                            <h4 class="mb-0">@item.Name</h4>
+                            <p>@item.Specialization</p>
+                            <p><b>Age:</b> @item.Age</p>
+
+
+                            <a asp-action="Appointment"
+                               asp-route-doctorId="@item.DoctorId"
+                               class="btn btn-sm btn-success mt-2">
+                                Make Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Pagination -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        @if(ViewBag.CurrentPage > 1 )
+                        {
+                            <li class="page-item"><a class="page-link" href="?page=@(ViewBag.CurrentPage - 1)">Previous</a></li>
+                        }
+                        
+                        @for(var i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            <li class="page-item"><a class="page-link" href="?page=@i">@i</a></li>
+                        }
+                        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                        {
+                            <li class="page-item"><a class="page-link" href="?page=@(ViewBag.CurrentPage + 1)">Next</a></li>
+                        }
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</section>
